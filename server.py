@@ -4,7 +4,6 @@ import threading
 import json
 import requests
 
-
 #config
 API_KEY = "c717617655b04aae8f8463442f1e21d6"
 BASE_URL = "https://newsapi.org/v2/"
@@ -177,4 +176,5 @@ def start_server():
         print(f"[ACTIVE CONNECTIONS] {threading.active_count() - 1}")
 
 if __name__ == "__main__":
+
     start_server()
