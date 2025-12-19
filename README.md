@@ -1,2 +1,2 @@
 ## Project Title
-#News Service System – Client/Server Project
+News Service System – Client/Server Project
