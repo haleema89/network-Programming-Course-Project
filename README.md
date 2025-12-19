@@ -1,4 +1,4 @@
 ## Project Title
 News Service System – Client/Server Project
-#Semester
+## Project Description
 first semester:2025-2026
