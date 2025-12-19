@@ -1,0 +1,214 @@
+{
+    "status": "ok",
+    "totalResults": 35,
+    "articles": [
+        {
+            "source": {
+                "id": null,
+                "name": "BBC News"
+            },
+            "author": "https://www.facebook.com/bbcnews",
+            "title": "Bank of England cuts interest rates to 3.75% - live updates - BBC",
+            "description": "The Bank's governor says interest rates are on a \"gradual\" downward path, and decisions around future cuts will be \"a closer call\".",
+            "url": "https://www.bbc.com/news/live/cn4d8p1gj2et",
+            "urlToImage": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/e1ef/live/f2a1a0e0-dbf3-11f0-b67b-690eb873de1b.jpg",
+            "publishedAt": "2025-12-18T12:24:38Z",
+            "content": "Faisal IslamEconomics editor\r\nThe Bank of England governor Andrew Bailey has timed this rate cut just before Christmas.\r\nAnd while this will be welcomed for many borrowers and businesses, the Bank se\u2026 [+1503 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "BBC News"
+            },
+            "author": null,
+            "title": "Fact-checking Trump\u2019s unusual new White House presidential plaques - BBC",
+            "description": null,
+            "url": "https://www.bbc.com/news/live/cn7k8evp6k3t",
+            "urlToImage": null,
+            "publishedAt": "2025-12-18T12:14:17Z",
+            "content": null
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "CNBC"
+            },
+            "author": "Fred Imbert",
+            "title": "Stocks making the biggest moves premarket: Micron Technology, Trump Media, Lululemon & more - CNBC",
+            "description": "These are the stocks posting the largest moves before the bell.",
+            "url": "https://www.cnbc.com/2025/12/18/stocks-making-the-biggest-moves-premarket-mu-djt-lulu.html",
+            "urlToImage": "https://image.cnbcfm.com/api/v1/image/108242673-1765922858341-gettyimages-2251668348-MICRON_EARNS.jpeg?v=1765923049&w=1920&h=1080",
+            "publishedAt": "2025-12-18T12:09:34Z",
+            "content": null
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "BBC News"
+            },
+            "author": null,
+            "title": "Dan Bongino stepping down as FBI deputy director - BBC",
+            "description": "The ex-podcaster announced he would leave the FBI after US President Donald Trump told reporters he \"wants to go back to his show\".",
+            "url": "https://www.bbc.com/news/articles/cvgj0p5yl92o",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/a7e1/live/658e5420-db92-11f0-88ca-0b2596ca1cee.jpg",
+            "publishedAt": "2025-12-18T10:35:30Z",
+            "content": "Dan Bongino has said he will leave his role as the FBI's deputy director in January.\r\nIn a post on X, he thanked President Donald Trump, as well as the director of the FBI and the US attorney general\u2026 [+2968 chars]"
+        },
+        {
+            "source": {
+                "id": "the-washington-post",
+                "name": "The Washington Post"
+            },
+            "author": "Akilah Johnson",
+            "title": "What blood tests to detect Alzheimer\u2019s biomarkers can and can\u2019t tell you - The Washington Post",
+            "description": "Researchers are exploring how new blood tests for Alzheimer\u2019s disease could lead to earlier detection.",
+            "url": "https://www.washingtonpost.com/health/2025/12/18/alzheimers-detection-blood-tests/",
+            "urlToImage": "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/CM4GX7WJ3Q43CYIKPVFMXPHYRI_size-normalized.jpg&w=1440",
+            "publishedAt": "2025-12-18T10:05:55Z",
+            "content": "As scientists race to develop simple blood tests that could one day act as an early warning system for Alzheimers disease by sounding the alarm before memory problems appear, new research shows track\u2026 [+104 chars]"
+        },
+        {
+            "source": {
+                "id": "cnn",
+                "name": "CNN"
+            },
+            "author": "Jinky Jorgio, Sandi Sidhu",
+            "title": "Bondi attack suspects had no visitors and barely left hotel during month-long Philippines stay, employee says - CNN",
+            "description": "The father and son suspected of carrying out Sunday\u2019s Bondi Beach massacre holed up in a hotel for most of their almost month-long stay in the Philippines in November, rarely left their rooms and dined on fast food, a hotel employee has told CNN.",
+            "url": "https://www.cnn.com/2025/12/18/asia/australia-bondi-attack-philippines-intl-hnk",
+            "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/ap25352170871974.jpg?c=16x9&q=w_800,c_fill",
+            "publishedAt": "2025-12-18T07:28:31Z",
+            "content": "The father and son suspected of carrying out Sundays Bondi Beach massacre holed up in a hotel for most of their almost month-long stay in the Philippines in November, rarely left their rooms and dine\u2026 [+4251 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "NPR"
+            },
+            "author": "The Associated Press",
+            "title": "US announces massive package of arms sales to Taiwan valued at more than $10 billion - NPR",
+            "description": "The Trump administration has announced a massive package of arms sales to Taiwan valued at more than $10 billion that includes medium-range missiles, howitzers and drones, a move that is sure to infuriate China.",
+            "url": "https://www.npr.org/2025/12/18/nx-s1-5648080/us-arms-sales-taiwan-10-billion",
+            "urlToImage": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/8062x4535+0+420/resize/1400/quality/100/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F0e%2Fcf%2Fe056fe0e4083b458d545a182543a%2Fap25352080467019.jpg",
+            "publishedAt": "2025-12-18T07:25:47Z",
+            "content": "WASHINGTON The Trump administration has announced a massive package of arms sales to Taiwan valued at more than $10 billion that includes medium-range missiles, howitzers and drones, a move that is s\u2026 [+4073 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "CNBC"
+            },
+            "author": "Tasmin Lockwood, Michael Considine",
+            "title": "BP names Meg O\u2019Neill as new CEO \u2014 its fourth in 6 years - CNBC",
+            "description": "BP's share price is up over 15% year-to-date. It made gains in the previous session and after hours trading as investors responded to the news.",
+            "url": "https://www.cnbc.com/2025/12/18/woodside-energys-meg-oneill-to-replace-murray-auchincloss-as-bp-ceo.html",
+            "urlToImage": "https://image.cnbcfm.com/api/v1/image/108243419-1766043009645-gettyimages-2213349131-AUSTRALIA_WOODSIDE.jpeg?v=1766052712&w=1920&h=1080",
+            "publishedAt": "2025-12-18T07:11:40Z",
+            "content": "BP has appointed Woodside Energy boss Meg O'Neill as its next CEO, reinforcing the British oil giant's back-to-basics strategy. \r\nO'Neill will replace Murray Auchincloss, after less than two years in\u2026 [+5208 chars]"
+        },
+        {
+            "source": {
+                "id": "abc-news",
+                "name": "ABC News"
+            },
+            "author": "ABC News",
+            "title": "Winning numbers drawn for $1.25 Powerball jackpot - ABC News",
+            "description": null,
+            "url": "https://abcnews.go.com/US/powerball-jackpot-surges-125-billion-ahead-wednesdays-drawing/story?id\\\\u003d128480216",
+            "urlToImage": null,
+            "publishedAt": "2025-12-18T06:56:43Z",
+            "content": null
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Understandingwar.org"
+            },
+            "author": "Christopher Solomon",
+            "title": "Russian Offensive Campaign Assessment, December 17, 2025 - Institute for the Study of War",
+            "description": "Russian President Vladimir Putin publicly and explicitly outlined his continued commitment to his maximalist war aims in Ukraine.",
+            "url": "https://understandingwar.org/research/russia-ukraine/russian-offensive-campaign-assessment-december-17-2025/",
+            "urlToImage": "https://understandingwar.org/wp-content/uploads/2025/08/25-250-04-ISW-ROCA-thumbnail_1.webp",
+            "publishedAt": "2025-12-18T02:41:45Z",
+            "content": null
+        },
+        {
+            "source": {
+                "id": "espn",
+                "name": "ESPN"
+            },
+            "author": "ESPN",
+            "title": "Florida 102-61 Saint Francis (Dec 17, 2025) Game Recap - ESPN",
+            "description": null,
+            "url": "https://www.espn.com/mens-college-basketball/recap?gameId\\\\u003d401812387",
+            "urlToImage": null,
+            "publishedAt": "2025-12-18T01:45:49Z",
+            "content": null
+        },
+        {
+            "source": {
+                "id": "cnn",
+                "name": "CNN"
+            },
+            "author": null,
+            "title": "Myanmar\u2019s military junta charge hundreds with breaking election law as voting date nears - CNN",
+            "description": "Myanmar\u2019s military government has charged more than 200 people with violating the Southeast Asian country\u2019s voting law ahead of a general election at the end of the month, keeping up pressure on opponents of the polls.",
+            "url": "https://www.cnn.com/2025/12/17/asia/myanmar-military-election-law-arrests-intl-hnk",
+            "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/ap25301170285912.jpg?c=16x9&q=w_800,c_fill",
+            "publishedAt": "2025-12-18T01:04:00Z",
+            "content": "Myanmars military government has charged more than 200 people with violating the Southeast Asian countrys voting law ahead of a general election at the end of the month, keeping up pressure on oppone\u2026 [+3946 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Suntimes.com"
+            },
+            "author": "Patrick Finley, Mitchell Armentrout",
+            "title": "Bears looking past Arlington Heights for possible stadium sites, including Northwest Indiana - Chicago Sun-Times",
+            "description": "Gov. JB Pritzker called the team's latest shift in its stadium focus \"a startling slap in the face.\"",
+            "url": "https://chicago.suntimes.com/bears/2025/12/17/bears-stadium-arlington-heights-kevin-warren-shift",
+            "urlToImage": "https://cst.brightspotcdn.com/dims4/default/839e20d/2147483647/strip/true/crop/5464x3119+0+0/resize/1461x834!/quality/90/?url=https%3A%2F%2Fchorus-production-cst-web.s3.us-east-1.amazonaws.com%2Fbrightspot%2F0a%2Fae%2Fed1ad3474acdbc91fe3a886efad6%2Farlington-061423-09.JPG",
+            "publishedAt": "2025-12-18T00:53:00Z",
+            "content": "The Bears sole focus for a new stadium is no longer Arlington Heights and no longer Illinois.\r\nIn the teams latest change of heart in a yearslong quest for a new home, Bears president and CEO Kevin W\u2026 [+5440 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Medium"
+            },
+            "author": "Avi Loeb",
+            "title": "3I/ATLAS Maintained a Sunward Jet After Its Gravitational Deflection by 16 Degrees at Perihelion - Avi Loeb \u2013 Medium",
+            "description": "The near alignment of the rotation axis of the interstellar object 3I/ATLAS with the sunward direction at large distances (as discussed\u2026",
+            "url": "https://avi-loeb.medium.com/3i-atlas-maintained-a-sunward-jet-after-its-gravitational-deflection-by-16-degrees-at-perihelion-e6810be9b3d8",
+            "urlToImage": "https://miro.medium.com/v2/resize:fit:1200/1*XIsQKfSZ4SCOBF7PoKFahQ.jpeg",
+            "publishedAt": "2025-12-17T23:14:04Z",
+            "content": "Image of the interstellar object 3I/ATLAS (top left panel) from a 0.25-meter telescope in Calabria, Italy, taken on December 15, 2025 at 1:58 UTC with 1.38 arcseconds per pixel corresponding to 3,850\u2026 [+8706 chars]"
+        },
+        {
+            "source": {
+                "id": "associated-press",
+                "name": "Associated Press"
+            },
+            "author": "Alanis Thames, Rob Maaddi",
+            "title": "Dolphins are benching Tua Tagovailoa for rookie Quinn Ewers against the Bengals - AP News",
+            "description": "The Miami Dolphins are benching quarterback Tua Tagovailoa for rookie seventh-round pick Quinn Ewers. Dolphins coach Mike McDaniel says his decision to start Ewers on Sunday against the Bengals came down to who he felt gave the Dolphins the best chance to win\u2026",
+            "url": "https://apnews.com/article/tagovailoa-benched-ewers-8217846db87002c2578455a1f1021962",
+            "urlToImage": "https://dims.apnews.com/dims4/default/956c1a5/2147483647/strip/true/crop/6919x3892+0+361/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F6c%2F29%2F7e5b4a391c6a1f036d7c049a459d%2Ff055b1da441845c9ad3d1fd7042bb918",
+            "publishedAt": "2025-12-17T23:06:00Z",
+            "content": "MIAMI GARDENS, Fla. (AP) Miami Dolphins quarterback Tua Tagovailoa was unsure what his future with the team will look like following Wednesdays benching for rookie Quinn Ewers.\r\nFor now, the former f\u2026 [+5241 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "OregonLive"
+            },
+            "author": "Joel Odom | The Oregonian/OregonLive",
+            "title": "As flu season hits, new \u2018K\u2019 variant has health experts concerned and urging vaccinations - OregonLive.com",
+            "description": "A new strain of influenza has become the most prevalent form of the virus this year.",
+            "url": "https://www.oregonlive.com/health/2025/12/as-flu-season-hits-new-k-variant-has-health-experts-concerned-and-urging-vaccinations.html",
+            "urlToImage": "https://www.oregonlive.com/resizer/v2/RAMWYGZAPRBPDNXFKYP6R5OHIU.jpg?auth=874f44403281bd16f4257784624417600d62e00e8968758c081c86c21aee00cd&width=1280&smart=true&quality=90",
+            "publishedAt": "2025-12-17T22:54:00Z",
+            "content": "With winter nearly here and holiday celebrations ramping up, health officials are encouraging flu vaccinations and raising concerns about a new flu variant.\r\nThe A H3N2 type of influenza virus, notor\u2026 [+2118 chars]"
+        }
+    ]
+}

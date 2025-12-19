@@ -3,7 +3,7 @@ import json
 
 #CONFIG
 SERVER_HOST = '127.0.0.1'  # Server IP
-SERVER_PORT = 5050     # Must match server port
+SERVER_PORT = 5050    # Must match server port
 
 #VALID PARAMETERS
 VALID_COUNTRIES = ["au", "ca", "jp", "ae", "sa", "kr", "us", "ma"]
@@ -185,7 +185,7 @@ def sources_menu(client):
             break
 
         client.send(str(idx).encode())  # Send selected index to server
-        details_data = client.recv(100000).decode()
+        details_data = client.recv(100000).dbiecode()
         details = json.loads(details_data)
         print("\n--- DETAILS ---")
         print(json.dumps(details, indent=4))
@@ -193,5 +193,3 @@ def sources_menu(client):
 #RUN CLIENT
 if __name__ == "__main__":
     main()
-
-
