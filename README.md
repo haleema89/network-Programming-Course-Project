@@ -36,5 +36,6 @@ To set up and run this project locally, ensure that Python 3.10 or higher is ins
 ## the Scripts 
 # server
 The server script implements a multi-client TCP server that accepts concurrent client connections using threads. For each connected client, the server receives a username, then repeatedly accepts menu requests ( headlines by country/category/keywords or sources by country/category/language), calls the NewsAPI endpoint (top-headlines or sources), saves the full API response as a JSON file in the data/ directory, and returns a summarized list of up to 15 results and a full detailed record for a user-selected index. The server keeps running until the client sends a quit command.
-# Standard library: socket, threading, json, os
-# Third-party: requests (HTTP requests to NewsAPI)
+
+Standard library: socket, threading, json, os
+Third-party: requests (HTTP requests to NewsAPI)
