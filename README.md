@@ -9,7 +9,13 @@ first semester:2025-2026
 - Student 1:Fatema SAlem Rashed 202302468(serever side)
 - Student 2: haleema khamis 202104099 (client side)
 ## Content of Table
-| Column 1 | Column 2 | Column 3 |
-|----------|----------|----------|
-| Data 1   | Data 2   | Data 3   |
-| Data 4   | Data 5   | Data 6   |
+| table: | 
+|----------|
+|Introduction|
+| Decsciption of the project |
+| Requitements|
+|HOW TO|
+|the Scripts|
+|Additional concepts|
+|conclusion|
+|Reference|
