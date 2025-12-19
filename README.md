@@ -6,7 +6,7 @@ first semester:2025-2026
 - Course: ITNE352 – Network Programming
 - Sec:2
 - Group Name:GB3
-- Student 1:Fatema SAlem Rashed 202302468(serever side)
+- Student 1:Fatema Salem Rashed 202302468(serever side)
 - Student 2: haleema khamis 202104099 (client side)
 ## Content of Table
 | table: | 
