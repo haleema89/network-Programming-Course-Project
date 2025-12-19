@@ -3,7 +3,6 @@ News Service System – Client/Server Project
 ## semester
 first semester:2025-2026
 ## Group
-## Group Information
 - Course: ITNE352 – Network Programming
 - Sec:2
 - Group Name:GB3
