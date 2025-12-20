@@ -1,137 +1,647 @@
-## Project Title
-News Service System – Client/Server Project
-## semester
-first semester:2025-2026
-## Group
-- Course: ITNE352 – Network Programming
-- Sec:2
-- Group Name:GB3
-- Student 1:Fatema Salem Rashed 202302468(serever side)
-- Student 2: haleema khamis 202104099 (client side)
-## Content of Table
-| table: | 
-|----------|
-|Introduction|
-| Decsciption of the project |
-| Requitements|
-|HOW TO|
-|the Scripts|
-|Additional concepts|
-|Acknowledgments|
-|conclusion|
-|Reference|
-## Introduction
-This project is a Python-based client-server application that provides access to online news
-The server communicates with NewsAPI and supports multiple client connections
-Users can request and view news headlines and sources using various search options.
-## Decsciption of the project
-This initiative focuses on developing a complete client-server system for delivering news services. The server is structured to manage several client connections simultaneously through the use of socket programming methods. It retrieves current news information from NewsAPI, processes that data, and saves the resulting content in . JSON format, making it easy to access and manage. On the client end, users can engage with a user-friendly, menu-driven interface. This feature enables them to search for news articles and sources using different criteria, such as keywords, country, and category. The project demonstrates a practical application of fundamental principles including networking, API integration, file handling, and organized data exchange among distributed systems.
-## Requitements
-To set up and execute this project locally, you need to install the necessary dependencies using the built-in pip package manager. Ensure you have an active internet connection and a valid NewsAPI key, which can be obtained from newsapi.org.
-Once the project files are downloaded or cloned, navigate to the project directory and use pip to install the required dependency (requests), keeping in mind that all other modules used are part of Python's standard library. For security purposes, the NewsAPI key can be configured either directly in the server code or via an environment variable.
-The system operates on a client-server architecture. The server is initialized first (using python server.py), enabling it to handle multiple client connections concurrently through TCP. The client application (executed with python client.py) then connects to the server, allowing users to interact via a menu-driven interface.
-The server manages incoming requests, communicates with the NewsAPI service to retrieve data, efficiently stores full JSON responses locally, and returns structured summaries and detailed results to the client in real-time, ensuring seamless coordination between the two components.
-## HOW TO
-To set up and run this project locally, ensure that Python 3.10 or higher is installed on your system along with the built-in pip package manager. The project requires an active internet connection and a valid NewsAPI key, which can be obtained by creating a free developer account at newsapi.org. After downloading or cloning the project files, navigate to the project directory using a terminal or command prompt. It is recommended to create and activate a virtual environment to isolate dependencies, then install the required external library using pip install requests, as the remaining modules (socket, threading, json, and os) are part of Python’s standard library. Next, configure the NewsAPI key either by directly assigning it to the API_KEY variable in the server script or by setting it as an environment variable and retrieving it within the code. Once the configuration is complete, start the server by running python server.py, which will listen for incoming client connections on the specified port. In a separate terminal window, run the client application using python client.py, enter a username when prompted, and interact with the system through the menu-based interface to request news headlines or sources. The server processes each request, retrieves data from NewsAPI, and stores the full JSON responses in the local data directory while returning summarized results and detailed information to the client in real time.
-## the Scripts 
-# server
-The server script implements a multi-client TCP server that accepts concurrent client connections using threads. For each connected client, the server receives a username, then repeatedly accepts menu requests ( headlines by country/category/keywords or sources by country/category/language), calls the NewsAPI endpoint (top-headlines or sources), saves the full API response as a JSON file in the data/ directory, and returns a summarized list of up to 15 results and a full detailed record for a user-selected index. The server keeps running until the client sends a quit command.
+# Markdown PDF
 
-Standard library: socket, threading, json, os
-Third-party: requests (HTTP requests to NewsAPI)
-## fetch_news (endpoint, params)
+This extension converts Markdown files to pdf, html, png or jpeg files.
 
-## TaskedwithinvokingNewsAPI anddeliveringthe JSONreply. Itincorporatesthe APIcredentialwitheachsolicitation,managestheHTTPfailures, andyieldseithersoundJSONcontentorafaultobject.
+[Japanese README](https://github.com/yzane/vscode-markdown-pdf/blob/HEAD/README.ja.md)
 
- 
-<img width="438" height="153" alt="2025-12-19" src="https://github.com/user-attachments/assets/8ea11800-f412-4a30-8e24-43a62b07c3a5" />
+## Table of Contents
+<!-- TOC depthFrom:2 depthTo:2 updateOnSave:false -->
 
- 
-## JSON saving
-## Implements reliable message sending to the client by usingFor every request, the server stores the full API response in the data/ folder using a structured
- 
+- [Specification Changes](#specification-changes)
+- [Features](#features)
+- [Install](#install)
+- [Usage](#usage)
+- [Extension Settings](#extension-settings)
+- [Options](#options)
+- [FAQ](#faq)
+- [Known Issues](#known-issues)
+- [Release Notes](#release-notes)
+- [License](#license)
+- [Special thanks](#special-thanks)
+
+<!-- /TOC -->
+
+<div class="page"/>
+
+## Specification Changes
+
+- Default Date Format for PDF Headers and Footers Modified
+  - Starting from version 1.5.0, the default date format for headers and footers has been changed to the ISO-based format (YYYY-MM-DD).
+  - This change aims to improve the consistency of date displays, as the previous format could vary depending on the environment.
+  - If you wish to use the previous format, please refer to [markdown-pdf.headerTemplate](#markdown-pdfheadertemplate).
+
+## Features
+
+Supports the following features
+* [Syntax highlighting](https://highlightjs.org/static/demo/)
+* [emoji](https://www.webfx.com/tools/emoji-cheat-sheet/)
+* [markdown-it-checkbox](https://github.com/mcecot/markdown-it-checkbox)
+* [markdown-it-container](https://github.com/markdown-it/markdown-it-container)
+* [markdown-it-include](https://github.com/camelaissani/markdown-it-include)
+* [PlantUML](https://plantuml.com/)
+  * [markdown-it-plantuml](https://github.com/gmunguia/markdown-it-plantuml)
+* [mermaid](https://mermaid-js.github.io/mermaid/)
+
+Sample files
+ * [pdf](https://github.com/yzane/vscode-markdown-pdf/blob/HEAD/sample/README.pdf)
+ * [html](https://github.com/yzane/vscode-markdown-pdf/blob/HEAD/sample/README.html)
+ * [png](https://github.com/yzane/vscode-markdown-pdf/blob/HEAD/sample/README.png)
+ * [jpeg](https://github.com/yzane/vscode-markdown-pdf/blob/HEAD/sample/README.jpeg)
+
+### markdown-it-container
+
+INPUT
+```
+::: warning
+*here be dragons*
+:::
+```
+
+OUTPUT
+``` html
+<div class="warning">
+<p><em>here be dragons</em></p>
+</div>
+```
+
+### markdown-it-plantuml
+
+INPUT
+```
+@startuml
+Bob -[#red]> Alice : hello
+Alice -[#0000FF]->Bob : ok
+@enduml
+```
+
+OUTPUT
+
+![PlantUML](https://github.com/yzane/vscode-markdown-pdf/raw/HEAD/images/PlantUML.png)
+
+### markdown-it-include
+
+Include markdown fragment files: `:[alternate-text](https://github.com/yzane/vscode-markdown-pdf/blob/HEAD/relative-path-to-file.md)`.
+
+```
+├── [plugins]
+│  └── README.md
+├── CHANGELOG.md
+└── README.md
+```
+
+INPUT
+```
+README Content
+
+:[Plugins](https://github.com/yzane/vscode-markdown-pdf/blob/HEAD/plugins/README.md)
+
+:[Changelog](https://github.com/yzane/vscode-markdown-pdf/blob/HEAD/CHANGELOG.md)
+```
+
+OUTPUT
+```
+Content of README.md
+
+Content of plugins/README.md
+
+Content of CHANGELOG.md
+```
+
+### mermaid
+
+INPUT
+<pre>
+```mermaid
+stateDiagram
+    [*] --> First
+    state First {
+        [*] --> second
+        second --> [*]
+    }
+```
+</pre>
+
+OUTPUT
+
+![mermaid](https://github.com/yzane/vscode-markdown-pdf/raw/HEAD/images/mermaid.png)
+
+## Install
+
+Chromium download starts automatically when Markdown PDF is installed and Markdown file is first opened with Visual Studio Code.
+
+However, it is time-consuming depending on the environment because of its large size (~ 170Mb Mac, ~ 282Mb Linux, ~ 280Mb Win).
+
+During downloading, the message `Installing Chromium` is displayed in the status bar.
+
+If you are behind a proxy, set the `http.proxy` option to settings.json and restart Visual Studio Code.
+
+If the download is not successful or you want to avoid downloading every time you upgrade Markdown PDF, please specify the installed [Chrome](https://www.google.co.jp/chrome/) or 'Chromium' with [markdown-pdf.executablePath](#markdown-pdfexecutablepath) option.
+
+<div class="page"/>
+
+## Usage
+
+### Command Palette
+
+1. Open the Markdown file
+1. Press `F1` or `Ctrl+Shift+P`
+1. Type `export` and select below
+   * `markdown-pdf: Export (settings.json)`
+   * `markdown-pdf: Export (pdf)`
+   * `markdown-pdf: Export (html)`
+   * `markdown-pdf: Export (png)`
+   * `markdown-pdf: Export (jpeg)`
+   * `markdown-pdf: Export (all: pdf, html, png, jpeg)`
+
+![usage1](https://github.com/yzane/vscode-markdown-pdf/raw/HEAD/images/usage1.gif)
+
+### Menu
+
+1. Open the Markdown file
+1. Right click and select below
+   * `markdown-pdf: Export (settings.json)`
+   * `markdown-pdf: Export (pdf)`
+   * `markdown-pdf: Export (html)`
+   * `markdown-pdf: Export (png)`
+   * `markdown-pdf: Export (jpeg)`
+   * `markdown-pdf: Export (all: pdf, html, png, jpeg)`
+
+![usage2](https://github.com/yzane/vscode-markdown-pdf/raw/HEAD/images/usage2.gif)
+
+### Auto convert
+
+1. Add `"markdown-pdf.convertOnSave": true` option to **settings.json**
+1. Restart Visual Studio Code
+1. Open the Markdown file
+1. Auto convert on save
+
+## Extension Settings
+
+[Visual Studio Code User and Workspace Settings](https://code.visualstudio.com/docs/customization/userandworkspace)
+
+1. Select **File > Preferences > UserSettings or Workspace Settings**
+1. Find markdown-pdf settings in the **Default Settings**
+1. Copy `markdown-pdf.*` settings
+1. Paste to the **settings.json**, and change the value
+
+![demo](https://github.com/yzane/vscode-markdown-pdf/raw/HEAD/images/settings.gif)
+
+## Options
+
+### List
+
+|Category|Option name|[Configuration scope](https://code.visualstudio.com/api/references/contribution-points#Configuration-property-schema)|
+|:---|:---|:---|
+|[Save options](#save-options)|[markdown-pdf.type](#markdown-pdftype)| |
+||[markdown-pdf.convertOnSave](#markdown-pdfconvertonsave)| |
+||[markdown-pdf.convertOnSaveExclude](#markdown-pdfconvertonsaveexclude)| |
+||[markdown-pdf.outputDirectory](#markdown-pdfoutputdirectory)| |
+||[markdown-pdf.outputDirectoryRelativePathFile](#markdown-pdfoutputdirectoryrelativepathfile)| |
+|[Styles options](#styles-options)|[markdown-pdf.styles](#markdown-pdfstyles)| |
+||[markdown-pdf.stylesRelativePathFile](#markdown-pdfstylesrelativepathfile)| |
+||[markdown-pdf.includeDefaultStyles](#markdown-pdfincludedefaultstyles)| |
+|[Syntax highlight options](#syntax-highlight-options)|[markdown-pdf.highlight](#markdown-pdfhighlight)| |
+||[markdown-pdf.highlightStyle](#markdown-pdfhighlightstyle)| |
+|[Markdown options](#markdown-options)|[markdown-pdf.breaks](#markdown-pdfbreaks)| |
+|[Emoji options](#emoji-options)|[markdown-pdf.emoji](#markdown-pdfemoji)| |
+|[Configuration options](#configuration-options)|[markdown-pdf.executablePath](#markdown-pdfexecutablepath)| |
+|[Common Options](#common-options)|[markdown-pdf.scale](#markdown-pdfscale)| |
+|[PDF options](#pdf-options)|[markdown-pdf.displayHeaderFooter](#markdown-pdfdisplayheaderfooter)|resource|
+||[markdown-pdf.headerTemplate](#markdown-pdfheadertemplate)|resource|
+||[markdown-pdf.footerTemplate](#markdown-pdffootertemplate)|resource|
+||[markdown-pdf.printBackground](#markdown-pdfprintbackground)|resource|
+||[markdown-pdf.orientation](#markdown-pdforientation)|resource|
+||[markdown-pdf.pageRanges](#markdown-pdfpageranges)|resource|
+||[markdown-pdf.format](#markdown-pdfformat)|resource|
+||[markdown-pdf.width](#markdown-pdfwidth)|resource|
+||[markdown-pdf.height](#markdown-pdfheight)|resource|
+||[markdown-pdf.margin.top](#markdown-pdfmargintop)|resource|
+||[markdown-pdf.margin.bottom](#markdown-pdfmarginbottom)|resource|
+||[markdown-pdf.margin.right](#markdown-pdfmarginright)|resource|
+||[markdown-pdf.margin.left](#markdown-pdfmarginleft)|resource|
+|[PNG JPEG options](#png-jpeg-options)|[markdown-pdf.quality](#markdown-pdfquality)| |
+||[markdown-pdf.clip.x](#markdown-pdfclipx)| |
+||[markdown-pdf.clip.y](#markdown-pdfclipy)| |
+||[markdown-pdf.clip.width](#markdown-pdfclipwidth)| |
+||[markdown-pdf.clip.height](#markdown-pdfclipheight)| |
+||[markdown-pdf.omitBackground](#markdown-pdfomitbackground)| |
+|[PlantUML options](#plantuml-options)|[markdown-pdf.plantumlOpenMarker](#markdown-pdfplantumlopenmarker)| |
+||[markdown-pdf.plantumlCloseMarker](#markdown-pdfplantumlclosemarker)| |
+||[markdown-pdf.plantumlServer](#markdown-pdfplantumlserver)| |
+|[markdown-it-include options](#markdown-it-include-options)|[markdown-pdf.markdown-it-include.enable](#markdown-pdfmarkdown-it-includeenable)| |
+|[mermaid options](#mermaid-options)|[markdown-pdf.mermaidServer](#markdown-pdfmermaidserver)| |
+
+### Save options
+
+#### `markdown-pdf.type`
+  - Output format: pdf, html, png, jpeg
+  - Multiple output formats support
+  - Default: pdf
+
+```javascript
+"markdown-pdf.type": [
+  "pdf",
+  "html",
+  "png",
+  "jpeg"
+],
+```
+
+#### `markdown-pdf.convertOnSave`
+  - Enable Auto convert on save
+  - boolean. Default: false
+  - To apply the settings, you need to restart Visual Studio Code
+
+#### `markdown-pdf.convertOnSaveExclude`
+  - Excluded file name of convertOnSave option
+
+```javascript
+"markdown-pdf.convertOnSaveExclude": [
+  "^work",
+  "work.md$",
+  "work|test",
+  "[0-9][0-9][0-9][0-9]-work",
+  "work\\test"  // All '\' need to be written as '\\' (Windows)
+],
+```
+
+#### `markdown-pdf.outputDirectory`
+  - Output Directory
+  - All `\` need to be written as `\\` (Windows)
+
+```javascript
+"markdown-pdf.outputDirectory": "C:\\work\\output",
+```
+
+  - Relative path
+    - If you open the `Markdown file`, it will be interpreted as a relative path from the file
+    - If you open a `folder`, it will be interpreted as a relative path from the root folder
+    - If you open the `workspace`, it will be interpreted as a relative path from the each root folder
+      - See [Multi-root Workspaces](https://code.visualstudio.com/docs/editor/multi-root-workspaces)
+
+```javascript
+"markdown-pdf.outputDirectory": "output",
+```
+
+  - Relative path (home directory)
+    - If path starts with  `~`, it will be interpreted as a relative path from the home directory
+
+```javascript
+"markdown-pdf.outputDirectory": "~/output",
+```
+
+  - If you set a directory with a `relative path`, it will be created if the directory does not exist
+  - If you set a directory with an `absolute path`, an error occurs if the directory does not exist
+
+#### `markdown-pdf.outputDirectoryRelativePathFile`
+  - If `markdown-pdf.outputDirectoryRelativePathFile` option is set to `true`, the relative path set with [markdown-pdf.outputDirectory](#markdown-pdfoutputDirectory) is interpreted as relative from the file
+  - It can be used to avoid relative paths from folders and workspaces
+  - boolean. Default: false
+
+### Styles options
+
+#### `markdown-pdf.styles`
+  - A list of local paths to the stylesheets to use from the markdown-pdf
+  - If the file does not exist, it will be skipped
+  - All `\` need to be written as `\\` (Windows)
+
+```javascript
+"markdown-pdf.styles": [
+  "C:\\Users\\<USERNAME>\\Documents\\markdown-pdf.css",
+  "/home/<USERNAME>/settings/markdown-pdf.css",
+],
+```
+
+  - Relative path
+    - If you open the `Markdown file`, it will be interpreted as a relative path from the file
+    - If you open a `folder`, it will be interpreted as a relative path from the root folder
+    - If you open the `workspace`, it will be interpreted as a relative path from the each root folder
+      - See [Multi-root Workspaces](https://code.visualstudio.com/docs/editor/multi-root-workspaces)
+
+```javascript
+"markdown-pdf.styles": [
+  "markdown-pdf.css",
+],
+```
+
+  - Relative path (home directory)
+    - If path starts with `~`, it will be interpreted as a relative path from the home directory
+
+```javascript
+"markdown-pdf.styles": [
+  "~/.config/Code/User/markdown-pdf.css"
+],
+```
+
+  - Online CSS (https://xxx/xxx.css) is applied correctly for JPG and PNG, but problems occur with PDF [#67](https://github.com/yzane/vscode-markdown-pdf/issues/67)
+
+```javascript
+"markdown-pdf.styles": [
+  "https://xxx/markdown-pdf.css"
+],
+```
+
+#### `markdown-pdf.stylesRelativePathFile`
+
+  - If `markdown-pdf.stylesRelativePathFile` option is set to `true`, the relative path set with [markdown-pdf.styles](#markdown-pdfstyles) is interpreted as relative from the file
+  - It can be used to avoid relative paths from folders and workspaces
+  - boolean. Default: false
+
+#### `markdown-pdf.includeDefaultStyles`
+  - Enable the inclusion of default Markdown styles (VSCode, markdown-pdf)
+  - boolean. Default: true
+
+### Syntax highlight options
+
+#### `markdown-pdf.highlight`
+  - Enable Syntax highlighting
+  - boolean. Default: true
+
+#### `markdown-pdf.highlightStyle`
+  - Set the style file name. for example: github.css, monokai.css ...
+  - [file name list](https://github.com/isagalaev/highlight.js/tree/master/src/styles)
+  - demo site : https://highlightjs.org/static/demo/
+
+```javascript
+"markdown-pdf.highlightStyle": "github.css",
+```
+
+### Markdown options
+
+#### `markdown-pdf.breaks`
+  - Enable line breaks
+  - boolean. Default: false
+
+### Emoji options
+
+#### `markdown-pdf.emoji`
+  - Enable emoji. [EMOJI CHEAT SHEET](https://www.webpagefx.com/tools/emoji-cheat-sheet/)
+  - boolean. Default: true
+
+### Configuration options
+
+#### `markdown-pdf.executablePath`
+  - Path to a Chromium or Chrome executable to run instead of the bundled Chromium
+  - All `\` need to be written as `\\` (Windows)
+  - To apply the settings, you need to restart Visual Studio Code
+
+```javascript
+"markdown-pdf.executablePath": "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
+```
+
+### Common Options
+
+#### `markdown-pdf.scale`
+  - Scale of the page rendering
+  - number. default: 1
+
+```javascript
+"markdown-pdf.scale": 1
+```
+
+### PDF options
+
+  - pdf only. [puppeteer page.pdf options](https://github.com/puppeteer/puppeteer/blob/main/docs/api/puppeteer.pdfoptions.md)
+
+#### `markdown-pdf.displayHeaderFooter`
+  - Enables header and footer display
+  - boolean. Default: true
+  - Activating this option will display both the header and footer
+  - If you wish to display only one of them, remove the value for the other
+  - To hide the header
+    ```javascript
+    "markdown-pdf.headerTemplate": "",
+    ```
+  - To hide the footer
+    ```javascript
+    "markdown-pdf.footerTemplate": "",
+    ```
+
+#### `markdown-pdf.headerTemplate`
+  - Specifies the HTML template for outputting the header
+  - To use this option, you must set `markdown-pdf.displayHeaderFooter` to `true`
+  - `<span class='date'></span>` : formatted print date. The format depends on the environment
+  - `<span class='title'></span>` : markdown file name
+  - `<span class='url'></span>` : markdown full path name
+  - `<span class='pageNumber'></span>` : current page number
+  - `<span class='totalPages'></span>` : total pages in the document
+  - `%%ISO-DATETIME%%` : current date and time in ISO-based format (`YYYY-MM-DD hh:mm:ss`)
+  - `%%ISO-DATE%%` : current date in ISO-based format (`YYYY-MM-DD`)
+  - `%%ISO-TIME%%` : current time in ISO-based format (`hh:mm:ss`)
+  - Default (version 1.5.0 and later): Displays the Markdown file name and the date using `%%ISO-DATE%%`
+    ```javascript
+    "markdown-pdf.headerTemplate": "<div style=\"font-size: 9px; margin-left: 1cm;\"> <span class='title'></span></div> <div style=\"font-size: 9px; margin-left: auto; margin-right: 1cm; \">%%ISO-DATE%%</div>",
+    ```
+  - Default (version 1.4.4 and earlier): Displays the Markdown file name and the date using `<span class='date'></span>`
+    ```javascript
+    "markdown-pdf.headerTemplate": "<div style=\"font-size: 9px; margin-left: 1cm;\"> <span class='title'></span></div> <div style=\"font-size: 9px; margin-left: auto; margin-right: 1cm; \"> <span class='date'></span></div>",
+    ```
+
+#### `markdown-pdf.footerTemplate`
+  - Specifies the HTML template for outputting the footer
+  - For more details, refer to [markdown-pdf.headerTemplate](#markdown-pdfheadertemplate)
+  - Default: Displays the {current page number} / {total pages in the document}
+    ```javascript
+    "markdown-pdf.footerTemplate": "<div style=\"font-size: 9px; margin: 0 auto;\"> <span class='pageNumber'></span> / <span class='totalPages'></span></div>",
+    ```
+
+#### `markdown-pdf.printBackground`
+  - Print background graphics
+  - boolean. Default: true
+
+#### `markdown-pdf.orientation`
+  - Paper orientation
+  - portrait or landscape
+  - Default: portrait
+
+#### `markdown-pdf.pageRanges`
+  - Paper ranges to print, e.g., '1-5, 8, 11-13'
+  - Default: all pages
+
+```javascript
+"markdown-pdf.pageRanges": "1,4-",
+```
+
+#### `markdown-pdf.format`
+  - Paper format
+  - Letter, Legal, Tabloid, Ledger, A0, A1, A2, A3, A4, A5, A6
+  - Default: A4
+
+```javascript
+"markdown-pdf.format": "A4",
+```
+
+#### `markdown-pdf.width`
+#### `markdown-pdf.height`
+  - Paper width / height, accepts values labeled with units(mm, cm, in, px)
+  - If it is set, it overrides the markdown-pdf.format option
+
+```javascript
+"markdown-pdf.width": "10cm",
+"markdown-pdf.height": "20cm",
+```
+
+#### `markdown-pdf.margin.top`
+#### `markdown-pdf.margin.bottom`
+#### `markdown-pdf.margin.right`
+#### `markdown-pdf.margin.left`
+  - Paper margins.units(mm, cm, in, px)
+
+```javascript
+"markdown-pdf.margin.top": "1.5cm",
+"markdown-pdf.margin.bottom": "1cm",
+"markdown-pdf.margin.right": "1cm",
+"markdown-pdf.margin.left": "1cm",
+```
+
+### PNG, JPEG options
+
+  - png and jpeg only. [puppeteer page.screenshot options](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#pagescreenshotoptions)
+
+#### `markdown-pdf.quality`
+  - jpeg only. The quality of the image, between 0-100. Not applicable to png images
+
+```javascript
+"markdown-pdf.quality": 100,
+```
+
+#### `markdown-pdf.clip.x`
+#### `markdown-pdf.clip.y`
+#### `markdown-pdf.clip.width`
+#### `markdown-pdf.clip.height`
+  - An object which specifies clipping region of the page
+  - number
+
+```javascript
+//  x-coordinate of top-left corner of clip area
+"markdown-pdf.clip.x": 0,
+
+// y-coordinate of top-left corner of clip area
+"markdown-pdf.clip.y": 0,
+
+// width of clipping area
+"markdown-pdf.clip.width": 1000,
+
+// height of clipping area
+"markdown-pdf.clip.height": 1000,
+```
+
+#### `markdown-pdf.omitBackground`
+  - Hides default white background and allows capturing screenshots with transparency
+  - boolean. Default: false
+
+### PlantUML options
+
+#### `markdown-pdf.plantumlOpenMarker`
+  - Oppening delimiter used for the plantuml parser.
+  - Default: @startuml
+
+#### `markdown-pdf.plantumlCloseMarker`
+  - Closing delimiter used for the plantuml parser.
+  - Default: @enduml
+
+#### `markdown-pdf.plantumlServer`
+  - Plantuml server. e.g. http://localhost:8080
+  - Default: http://www.plantuml.com/plantuml
+  - For example, to run Plantuml Server locally [#139](https://github.com/yzane/vscode-markdown-pdf/issues/139) :
+    ```
+    docker run -d -p 8080:8080 plantuml/plantuml-server:jetty
+    ```
+    [plantuml/plantuml-server - Docker Hub](https://hub.docker.com/r/plantuml/plantuml-server/)
+
+### markdown-it-include options
+
+#### `markdown-pdf.markdown-it-include.enable`
+  - Enable markdown-it-include.
+  - boolean. Default: true
+
+### mermaid options
+
+#### `markdown-pdf.mermaidServer`
+  - mermaid server
+  - Default: https://unpkg.com/mermaid/dist/mermaid.min.js
+
+<div class="page"/>
+
+## FAQ
+
+### How can I change emoji size ?
+
+1. Add the following to your stylesheet which was specified in the markdown-pdf.styles
+
+```css
+.emoji {
+  height: 2em;
+}
+```
+
+### Auto guess encoding of files
+
+Using `files.autoGuessEncoding` option of the Visual Studio Code is useful because it automatically guesses the character code. See [files.autoGuessEncoding](https://code.visualstudio.com/updates/v1_11#_auto-guess-encoding-of-files)
+
+```javascript
+"files.autoGuessEncoding": true,
+```
+
+### Output directory
+
+If you always want to output to the relative path directory from the Markdown file.
+
+For example, to output to the "output" directory in the same directory as the Markdown file, set it as follows.
+
+```javascript
+"markdown-pdf.outputDirectory" : "output",
+"markdown-pdf.outputDirectoryRelativePathFile": true,
+```
+
+### Page Break
+
+Please use the following to insert a page break.
+
+``` html
+<div class="page"/>
+```
+
+<div class="page"/>
+
+## Known Issues
+
+### `markdown-pdf.styles` option
+* Online CSS (https://xxx/xxx.css) is applied correctly for JPG and PNG, but problems occur with PDF. [#67](https://github.com/yzane/vscode-markdown-pdf/issues/67)
 
 
-<img width="355" height="97" alt="2" src="https://github.com/user-attachments/assets/ce39938c-8385-40f2-b252-e1db578a9e00" />
+## [Release Notes](https://github.com/yzane/vscode-markdown-pdf/blob/HEAD/CHANGELOG.md)
 
- 
-## handle_client
- ## connected client (runs in its own thread). It:Reads the client username. Receives requests in the format option param. Routes the request to the correct NewsAPI endpoint.Saves the full JSON response to disk using the required naming format.Sends a summarized list()Receives an index and returns full details.
-  
-<img width="486" height="353" alt="3" src="https://github.com/user-attachments/assets/8d0380b9-72b7-46c4-b6b1-0e65430391a1" />
- 
+### 1.5.0 (2023/09/08)
+* Improve: The default date format for headers and footers has been changed to the ISO-based format (YYYY-MM-DD).
+  * Support different date formats in templates [#197](https://github.com/yzane/vscode-markdown-pdf/pull/197)
+* Improve: Avoid TimeoutError: Navigation timeout of 30000 ms exceeded and TimeoutError: waiting for Page.printToPDF failed: timeout 30000ms exceeded [#266](https://github.com/yzane/vscode-markdown-pdf/pull/266)
+* Fix: Fix description of outputDirectoryRelativePathFile [#238](https://github.com/yzane/vscode-markdown-pdf/pull/238)
+* README
+  * Add: Specification Changes
+  * Fix: Broken link
 
+## License
 
-## start_server()
-## Starts the TCP server, listens for incoming connections, and spawns a new thread per client.
- 
-<img width="409" height="263" alt="4" src="https://github.com/user-attachments/assets/52ca10dd-034f-4046-8bba-7652fe450163" />
-
- 
-
-## Client-Side
-## 1-Main Functionalities 2-Utilized Packages 3-Important Functions
-## 1. main() – connecting to the server and showing menu
-1. main() – connecting to the server and showing menu
-client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client.connect((SERVER_HOST, SERVER_PORT))
-client.send(client_name.encode())
-## 2-headlines_menu() – sending request and receiving data
-request = options_map.get(choice) + '|' + param
-client.send(request.encode())
-data = client.recv(100000).decode()
-data_list = json.loads(data)
-## 3. sources_menu() – receiving details for selected source
-client.send(str(idx).encode())
-details_data = client.recv(100000).decode()
-details = json.loads(details_data)
+MIT
 
 
+## Special thanks
+* [GoogleChrome/puppeteer](https://github.com/GoogleChrome/puppeteer)
+* [markdown-it/markdown-it](https://github.com/markdown-it/markdown-it)
+* [mcecot/markdown-it-checkbox](https://github.com/mcecot/markdown-it-checkbox)
+* [leff/markdown-it-named-headers](https://github.com/leff/markdown-it-named-headers)
+* [markdown-it/markdown-it-emoji](https://github.com/markdown-it/markdown-it-emoji)
+* [HenrikJoreteg/emoji-images](https://github.com/HenrikJoreteg/emoji-images)
+* [isagalaev/highlight.js](https://github.com/isagalaev/highlight.js)
+* [cheeriojs/cheerio](https://github.com/cheeriojs/cheerio)
+* [janl/mustache.js](https://github.com/janl/mustache.js)
+* [markdown-it/markdown-it-container](https://github.com/markdown-it/markdown-it-container)
+* [gmunguia/markdown-it-plantuml](https://github.com/gmunguia/markdown-it-plantuml)
+* [camelaissani/markdown-it-include](https://github.com/camelaissani/markdown-it-include)
+* [mermaid-js/mermaid](https://github.com/mermaid-js/mermaid)
+* [jonschlinkert/gray-matter](https://github.com/jonschlinkert/gray-matter)
 
-## Additional concept
-Additional Concepts Used
-Including:
- | table: | 
-|----------|
-|Multithreading|
-|API Integration|
-|JSON Data Handling|
-|Input Validation|
-|File Storage|
-|Custom Communication Protocol|
+and
 
-
-
-## 1-  Multithreading Example
-thread = threading.Thread(target=handle_client, args=(conn, addr))
-thread.start()
- ## 2-Custom Protocol Example
-request = "headlines_country|us"
-client.send(request.encode())
-##  3-JSON Data Handling Example
-# Sending JSON
-conn.send(json.dumps(send_list).encode())
-# Receiving JSON
-details = json.loads(details_data)
-   ## API Integration Example
-response = requests.get(BASE_URL + endpoint, params=params)
-data = response.json()
-
-## Object-Oriented Programming  is the key concept implemented in our code. This paradigm focuses on organizing code around objects, combining data and behavior. It enhances scalability and maintainability of the code.   achieves this through the use of methods, objects, classes, and more. By leveraging these elements, we ensure our code remains structured and adaptable. In the following discussion, we will delve deeper into this concept with the help of provided code snippets  to better illustrate its application.
-
-
-## Acknowledgments
-we would like to express our sincere gratitude to our course instructor for the guidance and support provided throughout this project. We also thank the university for providing the necessary resources and learning environment that enabled us to .complete this work successfully
-
-
-## conclusion
-In this project, we developed a client-server-based news retrieval system using Python. Object-oriented programming was utilized to manage client connections for the server. The server communicates with an external NewsAPI service to fetch real-time news data and provide responses to connected clients. Multithreading was incorporated to efficiently handle multiple client connections simultaneously. We relied on GitHub for script management and troubleshooting, ensuring seamless collaboration and version control. Overall, this project offered valuable experience in network programming, API integration, and troubleshooting. It enhanced our coding skills and deepened our understanding of various concepts in programming and system design.
-
-
-## Reference
-- onecompiler (nd-b). Python Tutorials Real Python  https://onecompiler.com/python/3yxmxq8xd
-
-- Stack Overfiow. (nd) Newest questions https://stackoverflow.com/questions
-
-- newsapi.https://newsapi.org/
-  
+* [cakebake/markdown-themeable-pdf](https://github.com/cakebake/markdown-themeable-pdf)
