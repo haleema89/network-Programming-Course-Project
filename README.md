@@ -80,7 +80,7 @@ details = json.loads(details_data)
 ## Additional concept
 Additional Concepts Used
 Including:
-| table: | 
+ | table: | 
 |----------|
 |Multithreading|
 |API Integration|
@@ -88,6 +88,7 @@ Including:
 |Input Validation|
 |File Storage|
 |Custom Communication Protocol|
+<p></p>
 ## 1-  Multithreading Example
 thread = threading.Thread(target=handle_client, args=(conn, addr))
 thread.start()
