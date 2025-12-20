@@ -9,7 +9,7 @@ API_KEY = "c717617655b04aae8f8463442f1e21d6"
 BASE_URL = "https://newsapi.org/v2/"
 GROUP_ID = "ITNE352-GB3"
 HOST = "0.0.0.0"
-PORT = 8000
+PORT =8000
 # DATA FOLDER
 
 # Ensure 'data' folder exists
@@ -105,7 +105,7 @@ def handle_client(conn, addr):
                 for i, a in enumerate(articles):
                     send_list.append({
                         "index": i,
-                        "Source": a.get("source", {}).get("Name"),
+                        "Source": a.get("source", {}).get("name"),
                         "author": a.get("author"),
                         "Title": a.get("Title"),
                         "description": a.get("description")
@@ -176,5 +176,4 @@ def start_server():
         print(f"[ACTIVE CONNECTIONS] {threading.active_count() - 1}")
 
 if __name__ == "__main__":
-
     start_server()
