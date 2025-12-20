@@ -70,7 +70,7 @@ Third-party: requests (HTTP requests to NewsAPI)
  
 
 ## Client-Side
-## 1Main Functionalities 2Utilized Packages 3Important Functions
+## 1-Main Functionalities 2-Utilized Packages 3-Important Functions
 ## 1. main() – connecting to the server and showing menu
 1. main() – connecting to the server and showing menu
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -85,6 +85,9 @@ data_list = json.loads(data)
 client.send(str(idx).encode())
 details_data = client.recv(100000).decode()
 details = json.loads(details_data)
+
+
+
 ## Additional concept
 Additional Concepts Used
 Including:
