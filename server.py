@@ -9,7 +9,7 @@ API_KEY = "c717617655b04aae8f8463442f1e21d6"
 BASE_URL = "https://newsapi.org/v2/"
 GROUP_ID = "ITNE352-GB3"
 HOST = "0.0.0.0"
-PORT = 5050
+PORT = 8000
 # DATA FOLDER
 
 # Ensure 'data' folder exists
@@ -70,7 +70,7 @@ def handle_client(conn, addr):
                 param = defaults[option]
 
             # API routing
-            if option == "keadlines_keywords":
+            if option == "headlines_keywords":
                 data = fetch_news("everything", {"q": param})
             elif option == "headlines_category":
                 data = fetch_news("top-headlines", {"category": param})
@@ -176,4 +176,5 @@ def start_server():
         print(f"[ACTIVE CONNECTIONS] {threading.active_count() - 1}")
 
 if __name__ == "__main__":
+
     start_server()
