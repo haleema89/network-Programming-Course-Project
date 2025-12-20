@@ -121,6 +121,8 @@ data = response.json()
 
 
 ## Acknowledgments
+we would like to express our sincere gratitude to our course instructor for the guidance and support provided throughout this project. We also thank the university for providing the necessary resources and learning environment that enabled us to .complete this work successfully
+
 
 ## conclusion
 In this project, we developed a client-server-based news retrieval system using Python. Object-oriented programming was utilized to manage client connections for the server. The server communicates with an external NewsAPI service to fetch real-time news data and provide responses to connected clients. Multithreading was incorporated to efficiently handle multiple client connections simultaneously. We relied on GitHub for script management and troubleshooting, ensuring seamless collaboration and version control. Overall, this project offered valuable experience in network programming, API integration, and troubleshooting. It enhanced our coding skills and deepened our understanding of various concepts in programming and system design.
