@@ -41,18 +41,26 @@ Standard library: socket, threading, json, os
 Third-party: requests (HTTP requests to NewsAPI)
 ## fetch_news (endpoint, params)
 ## TaskedwithinvokingNewsAPI anddeliveringthe JSONreply. Itincorporatesthe APIcredentialwitheachsolicitation,managestheHTTPfailures, andyieldseithersoundJSONcontentorafaultobject.
+## ------------------------------------------------------------------------------------------------------------------------------------------------------
 <img width="438" height="153" alt="2025-12-19" src="https://github.com/user-attachments/assets/8ea11800-f412-4a30-8e24-43a62b07c3a5" />
+## ------------------------------------------------------------------------------------------------------------------------------------------------------
 ## JSON saving
 ## Implements reliable message sending to the client by usingFor every request, the server stores the full API response in the data/ folder using a structured
+## ------------------------------------------------------------------------------------------------------------------------------------------------------
 <img width="355" height="97" alt="2" src="https://github.com/user-attachments/assets/ce39938c-8385-40f2-b252-e1db578a9e00" />
+## ------------------------------------------------------------------------------------------------------------------------------------------------------
 ## handle_client
  ## connected client (runs in its own thread). It:Reads the client username. Receives requests in the format option param. Routes the request to the correct NewsAPI endpoint.Saves the full JSON response to disk using the required naming format.Sends a summarized list()Receives an index and returns full details.
+ ## ------------------------------------------------------------------------------------------------------------------------------------------------------
 <img width="486" height="353" alt="3" src="https://github.com/user-attachments/assets/8d0380b9-72b7-46c4-b6b1-0e65430391a1" />
+## ------------------------------------------------------------------------------------------------------------------------------------------------------
 ## start_server()
 ## Starts the TCP server, listens for incoming connections, and spawns a new thread per client.
+## ------------------------------------------------------------------------------------------------------------------------------------------------------
 <img width="409" height="263" alt="4" src="https://github.com/user-attachments/assets/52ca10dd-034f-4046-8bba-7652fe450163" />
+## ------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Client-Side
-## •	Main Functionalities •	Utilized Packages •	Important Functions
+## 1Main Functionalities 2Utilized Packages 3Important Functions
 ## 1. main() – connecting to the server and showing menu
 1. main() – connecting to the server and showing menu
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -70,12 +78,14 @@ details = json.loads(details_data)
 ## Additional concept
 Additional Concepts Used
 Including:
-•	|Multithreading|
-•	|API Integration|
-•	|JSON Data Handling|
-•	|Input Validation|
-•	|File Storage|
-•	|Custom Communication Protocol|
+| table: | 
+|----------|
+|Multithreading|
+|API Integration|
+|JSON Data Handling|
+|Input Validation|
+|File Storage|
+|Custom Communication Protocol|
 ## 1-  Multithreading Example
 thread = threading.Thread(target=handle_client, args=(conn, addr))
 thread.start()
