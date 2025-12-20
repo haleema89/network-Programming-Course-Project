@@ -40,7 +40,9 @@ The server script implements a multi-client TCP server that accepts concurrent c
 Standard library: socket, threading, json, os
 Third-party: requests (HTTP requests to NewsAPI)
 ## fetch_news (endpoint, params)
+
 ## TaskedwithinvokingNewsAPI anddeliveringthe JSONreply. Itincorporatesthe APIcredentialwitheachsolicitation,managestheHTTPfailures, andyieldseithersoundJSONcontentorafaultobject.
+
 ## ------------------------------------------------------------------------------------------------------------------------------------------------------
 <img width="438" height="153" alt="2025-12-19" src="https://github.com/user-attachments/assets/8ea11800-f412-4a30-8e24-43a62b07c3a5" />
 ## ------------------------------------------------------------------------------------------------------------------------------------------------------
