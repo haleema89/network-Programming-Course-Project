@@ -127,7 +127,7 @@ In this project, we developed a client-server-based news retrieval system using 
 
 
 ## Reference
--Python, R. (nd-b). Python Tutorials Real Python.  Real Python littps://tes pytnon 
+- onecompiler (nd-b). Python Tutorials Real Python  https://onecompiler.com/python/3yxmxq8xd
 
 - Stack Overfiow. (nd) Newest questions. https//stackoverlow.com/questions
 
