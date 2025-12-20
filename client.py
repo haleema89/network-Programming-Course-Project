@@ -3,7 +3,7 @@ import json
 
 #CONFIG
 SERVER_HOST = '127.0.0.1'  # Server IP
-SERVER_PORT = 5050    # Must match server port
+SERVER_PORT = 8000   # Must match server port
 
 #VALID PARAMETERS
 VALID_COUNTRIES = ["au", "ca", "jp", "ae", "sa", "kr", "us", "ma"]
@@ -193,3 +193,4 @@ def sources_menu(client):
 #RUN CLIENT
 if __name__ == "__main__":
     main()
+
