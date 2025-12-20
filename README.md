@@ -127,6 +127,9 @@ In this project, we developed a client-server-based news retrieval system using 
 
 
 ## Reference
--Python, R. (nd-b). Python Tutorials Real Python.  Real Python littps://tes pytnon _
--Stack Overfiow. (nd) Newest questions. https//stackoverlow.com/questions
--newsapi.https://newsapi.org/
+-Python, R. (nd-b). Python Tutorials Real Python.  Real Python littps://tes pytnon 
+
+- Stack Overfiow. (nd) Newest questions. https//stackoverlow.com/questions
+
+- newsapi.https://newsapi.org/
+  
