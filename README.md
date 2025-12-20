@@ -99,7 +99,9 @@ Including:
 |Input Validation|
 |File Storage|
 |Custom Communication Protocol|
-<p></p>
+
+
+
 ## 1-  Multithreading Example
 thread = threading.Thread(target=handle_client, args=(conn, addr))
 thread.start()
@@ -114,6 +116,17 @@ details = json.loads(details_data)
    ## API Integration Example
 response = requests.get(BASE_URL + endpoint, params=params)
 data = response.json()
+
+## Object-Oriented Programming  is the key concept implemented in our code. This paradigm focuses on organizing code around objects, combining data and behavior. It enhances scalability and maintainability of the code.   achieves this through the use of methods, objects, classes, and more. By leveraging these elements, we ensure our code remains structured and adaptable. In the following discussion, we will delve deeper into this concept with the help of provided code snippets  to better illustrate its application.
+
+
 ## Acknowledgments
 
+## conclusion
+In this project, we developed a client-server-based news retrieval system using Python. Object-oriented programming was utilized to manage client connections for the server. The server communicates with an external NewsAPI service to fetch real-time news data and provide responses to connected clients. Multithreading was incorporated to efficiently handle multiple client connections simultaneously. We relied on GitHub for script management and troubleshooting, ensuring seamless collaboration and version control. Overall, this project offered valuable experience in network programming, API integration, and troubleshooting. It enhanced our coding skills and deepened our understanding of various concepts in programming and system design.
 
+
+## Reference
+-Python, R. (nd-b). Python Tutorials Real Python.  Real Python littps://tes pytnon _
+-Stack Overfiow. (nd) Newest questions. https//stackoverlow.com/questions
+-newsapi.https://newsapi.org/
