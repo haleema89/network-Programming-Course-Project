@@ -129,7 +129,7 @@ In this project, we developed a client-server-based news retrieval system using 
 ## Reference
 - onecompiler (nd-b). Python Tutorials Real Python  https://onecompiler.com/python/3yxmxq8xd
 
-- Stack Overfiow. (nd) Newest questions. https//stackoverlow.com/questions
+- Stack Overfiow. (nd) Newest questions https://stackoverflow.com/questions
 
 - newsapi.https://newsapi.org/
   
